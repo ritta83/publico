@@ -1,0 +1,140 @@
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+	<html lang="es">
+
+	<!--
+	Tema: Web 
+	alumno: Rita
+	fecha:9 febrero 2021
+	-->
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<!-- importante SEO para la etiqueta del navegador -->
+		<title>position css</title>
+		
+		
+		<!-- solo aquellos estilos que solo aplican a esta pagina -->
+		<style>
+			body {
+				background: rgba(0, 0, 128, 0.1) /* Azul al 10% */
+			}
+			.pos-relative{
+			background-color:red;	
+			position:relative;
+			left:50px;
+			top:60px;
+		    /* es el normal de html/css,
+			me quedo flotando,punto de refencia ubicacion x defecto cn static
+			se comporta como dsplay block
+			que se aplica por defecto */
+			}
+			.pos-static{
+			background-color:green;
+			
+			position:static;
+			left:50px;
+			top: 60px;
+			/* es el normal de html/css,que se aplica por defecto */
+			}
+			.pos-absolute{
+			background-color:yellow;
+			position:absolute;
+			left:50px;
+			top: 60px;
+			/* es el normal de html/css,que se aplica por defecto
+			ajusta el ancho del elemento al contenido como display flex
+			cambio mi punto de referencia al primer elemento de la pag.(body)
+			*/
+			}
+			.pos-fixed{
+			background-color:blue;
+			/* es el normal de html/css,que se aplica por defecto */
+			position:fixed;
+			margin-left:50px;
+			top: 100px;
+			}
+			.pos-sticky{
+			background-color:orange;
+			/* es el normal de html/css,que se aplica por defecto */
+			position:sticky;
+			margin-left:50px;
+			margin-top:60px;
+			top: 50px;
+			}
+			.ancestro{
+			position:relative;
+			left:50px;
+			top:60px
+			}
+		</style>
+		
+		<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+		<script src="00-modelo.js"></script>
+		
+		<!-- scripts personalizados Javascript o JQuery -->
+		<script>
+			// aqui el codigo ...
+		</script>
+	</head>
+
+
+	<body>
+
+		<!-- cabecera de pagina -->
+		<header>
+			<h1>CSS POSITION</h1><br/>
+			<h2>static,relative,absolute,fixed,sticky</h2>
+			<br/>
+		</header>
+	<div>	
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>(1) parrafo de texto largo para que no quede corto</p>
+	<div class="ancestro">
+	<P class="pos-absolute">(2) ABSOLUTE</p>
+	</div>
+	<P>(3) parrafo de texto largo para que no quede corto</p>
+	<P class="pos-relative">(4) RELATIVE</p>
+	
+	<P class="pos-static">(5) STATIC</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P class="pos-sticky">(7) STICKY</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P class="pos-fixed">(10) FIXED</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+	<P>parrafo de texto largo para que no quede corto</p>
+</div>
+
+		<!-- pie de pagina -->
+		<footer>
+			<br/><br/><br/>
+			<div>&copy; 2020 <a href="https://carlosboni.com" target="_blank">Prof. Carlos Boni</a></div>
+		</footer>
+
+		<script>
+			// seccion de codigo javascript 
+
+		</script>
+	</body>
+	</html>
