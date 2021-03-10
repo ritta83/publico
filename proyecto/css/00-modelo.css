@@ -1,0 +1,257 @@
+/*
+CSS 
+web o pagina:
+autor:
+fecha:
+RECORDAR:
+en caso de conflictos se aplica el estilo que se define último,
+o sea al final de este archivo o en la misma pagina html
+
+Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
+
+*/
+
+* {
+  /* estilos por defecto para TODOS los elementos de la página; */
+  /* estilo:valor; */
+}
+
+div {
+  /* estilos para todos los elementos <div>; */
+  /* estilo:valor; */
+  
+  /* box-sizing:border-box  incluye en las dimensiones de un elemento el espacio del padding y del border. */
+  /* display:flex   da la misma altura a todos los elementos que están en el mismo DIV */
+}
+
+.claseUno {
+  /* estilos para todos los elementos que son de la clase .claseUno; */
+  /* estilo:valor; */
+}
+
+.claseUno.claseDos {
+  /* estilos para todos los elementos que son de la clase .claseUno y .claseDos;
+     NO hay espacio entre ambos selectores  */
+  /* estilo:valor; */
+}
+
+.claseUno .claseDos {
+  /* estilos para todos los elementos de .claseDos que descienden de uno de .claseUno;
+     HAY UN espacio entre ambos selectores  */
+  /* estilo:valor; */
+}
+
+#esteElemento {
+  /* estilos para el único elemento identificado con este #esteElemento; */
+  /* estilo:valor; */
+}
+
+p.claseUno {
+  /* estilos para todos los elementos <p> que son de la clase .claseUno; */
+  /* estilo:valor; */
+}
+
+p,div {
+  /* estilos para todos los elementos que sean <p> o <div>; */
+  /* estilo:valor; */
+}
+
+div > p {
+  /* estilos para todos los elementos que sean <p> que estén dentro (sean hijos de) un <div>; */
+  /* estilo:valor; */
+}
+
+h1 + p {
+  /* estilos para todos los elementos que sean <p> que sean hermanos y estén inmediantamente después de <h1>; */
+  /* estilo:valor; */
+}
+
+		*{
+		  box-sizing: border-box;
+		  padding: 0;
+		  margin: 0;
+		}
+		
+		
+		body {
+			background-color: rgba(0, 0, 128, 0.1); /* Azul al 10% */
+			margin:0px;
+			font-family: 'Nunito', sans-serif;
+		}	
+		
+		.marco {
+		  display: grid;
+		  grid-template-columns: 250px auto;
+		  grid-template-rows: 150px 40px auto 40px;
+		  grid-gap: 10px;
+		  width: 100vw;
+		  height: 100vh;
+		}
+		
+		.encabezado {
+		  grid-column: 1 / span 2;
+		  grid-row: 1 / span 1;
+		}
+		
+		.migas {
+		  border-style: solid;
+		  border-color: yellow;
+		  grid-column: 1 / span 2;
+		  grid-row: 2 / span 1;
+		}
+		
+		.lado {
+		  border-style: solid;
+		  border-color: violet;
+		  grid-column: 1 / span 1;
+		  grid-row: 3 / span 1;
+		}
+		
+		.contenido {
+		  border-style: solid;
+		  border-color: violet;
+		  grid-column: 2 / span 1;
+		  grid-row: 3 / span 1;
+		}
+		
+		.pie {
+		  border-style: solid;
+		  border-color: aqua;
+		  grid-column: 1 / span 2;
+		  grid-row: 4 / span 1;
+		}
+
+		
+		.navbar {
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		.navbar a {
+		  float: left;
+		  font-size: 16px;
+		  color: white;
+		  text-align: center;
+		  padding: 45px 45px;
+		  text-decoration: none;
+		}
+
+		.dropdown {
+		  float: left;
+		  overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+		  font-size: 16px;  
+		  border: none;
+		  outline: none;
+		  color: white;
+		  padding: 14px 16px;
+		  background-color: inherit;
+		  font-family: inherit;
+		  margin: 0;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+		  background-color: red;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  float: none;
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+
+		.dropdown-content a:hover {
+		  background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		
+		a:active {
+			color:yellow;
+			font-size:1.1em;
+			
+		}
+		
+		.visitas{
+			color:white;
+		}
+		
+		ul.breadcrumb {
+		  padding: 7px 0 0 25px;
+		  list-style: none;
+		}
+
+		/* Display list items side by side */
+		 ul.breadcrumb li {
+		  display: inline;
+		  font-size: 18px;
+		}
+
+		/* Add a slash symbol (/) before/behind each list item */
+		ul.breadcrumb li+li:before {
+		  padding: 8px;
+		  color: black;
+		  content: "/\00a0";
+		}
+
+		/* Add a color to all links inside the list */
+		 ul.breadcrumb li a {
+		  color: #0275d8;
+		  text-decoration: none;
+		}
+
+		/* Add a color on mouse-over */
+		ul.breadcrumb li a:hover {
+		  color: #01447e;
+		  text-decoration: underline;
+		} 
+		
+		@media screen and (max-width:600px){
+			/* reparamos el estilo para pantallas estrechas */
+			
+			.navbar, .navbar a, .navbar>div, .dropbtn {
+				width:100%;
+				float: none;
+				display:block;
+			}
+		    .dropdown-content a{
+				display:none;
+			}
+						
+			
+		}
+
+/*
+
+pseudoclases, asignarles estilos en este orden llamado LVHA:
+   :link — :visited — :hover — :active.
+   
+Más selectores y documentación:
+pseudo-clases: https://www.w3schools.com/css/css_pseudo_classes.asp
+pseudo-elementos: https://www.w3schools.com/css/css_pseudo_elements.asp
+pseudo-atributos: https://www.w3schools.com/css/css_attribute_selectors.asp
+formularios: https://www.w3schools.com/css/css_form.asp
+posicionamiento: https://www.w3schools.com/css/css_positioning.asp
+selectores: https://www.w3schools.com/cssref/css_selectors.asp
+*/
+
+
+
+
+

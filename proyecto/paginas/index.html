@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>Titulo en Etiqueta del Navegador</title>
+	
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+	
+	<!-- una hoja de estilos externa-->
+	
+	<!-- una hoja de estilos personalizada-->
+	<link href="../css/00-modelo.css" rel="stylesheet"/>
+	
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+	
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="../js/00-modelo.js"></script>
+	
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		
+	</script>
+</head>
+
+
+<body>
+
+	<div class="marco">
+		<div class="encabezado">
+			<div class="navbar">
+				<a href="inicio.html" onclick="sumar()">Inicio</a>
+				<a href="actualidad.html">Actualidad</a>
+				<a href="#">Blog</a>
+				<a href="#">Tendencia</a>
+				<a href="#">Contactar</a>
+				<div id="visitas" class="visitas">Has visitado <span id="total">0</span> páginas</div>
+			</div>
+		</div>
+		<div class="migas">
+			<ul class="breadcrumb">
+			  <li>Estás en: <a href="inicio.html" onclick="sumar()">Inicio</a></li>
+			</ul> 
+		</div>
+		<div class="lado">
+			<div class="navbar">
+				<a href="#home" onclick="sumar()">Inicio</a>
+				<a href="#news">Actualidad</a>
+				<a href="#home">Blog</a>
+				<a href="#news">Tendencia</a>
+				<a href="#home">Contactar</a>
+			</div>
+		</div>
+		<div class="contenido">Contenido</div>
+		<div class="pie">Pie de página</div>
+	</div>
+
+
+</body>
+</html>
