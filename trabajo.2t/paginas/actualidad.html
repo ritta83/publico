@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: 2º trimestre DAM
+autor: Rita Mª Mesa Jiménez
+fecha: 17 Marzo 2021
+-->
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>Titulo en Etiqueta del Navegador</title>
+	
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+	
+	<!-- una hoja de estilos externa-->
+	
+	<!-- una hoja de estilos personalizada-->
+	<link href="../css/00-modelo.css" rel="stylesheet"/>
+	
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+	
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="../js/00-modelo.js"></script>
+	
+	<!-- scripts personalizados Javascript o JQuery -->
+	<script>
+		
+	</script>
+</head>
+
+
+<body>
+	<div class="marco">
+		<div class="encabezado">
+			<div class="navbar">
+				<nav>				
+					<a href="index.html" onclick="sumar()">Inicio</a>
+					<a href="actualidad.html">Actualidad</a>
+					<a href="#">Blog</a>
+					<a href="#">Tendencia</a>
+					<a href="#">Contactar</a>
+				</nav>
+				<div id="visitas" class="visitas">Has visitado <span id="total">0</span> páginas</div>
+			</div>
+		</div>
+		<div class="migas">
+			<ul class="breadcrumb">
+			  <li>Estás en: <a href="inicio.html" onclick="sumar()">Actualidad</a></li>
+			</ul> 
+		</div>
+		<div class="lado">
+			<div class="navbar">
+				<nav>
+					<a href="index.html"  onclick="sumar()">Inicio</a>
+					<a href="actualidad.html">Actualidad</a>
+					<a href="#home">Blog</a>
+					<a href="#news">Tendencia</a>
+					<a href="#home">Contactar</a>
+				</nav>
+			</div>
+		</div>
+		
+		<main>		
+			<div class="contenido">						
+				<div class="centro2"><summary><h1>Ciberseguridad.</h1></summary></div>
+				<img class="cb1" src="../media/ciber1.jpg"/>				   							
+				<p>Muchos de los que nos dedicamos a recomendar a nuestros clientes acerca de la mejor manera de plantear una estrategia de ciberseguridad nos encontramos aún con situaciones donde el principal stopper es el responsable de IT. Es bastante típico escuchar eso de que “yo, es que soy de tal marca” o “de tal otra” cuando se refieren a las marcas de firewalls o de antivirus, y existe un poco de fanatismo que me recuerda al fanatismo de los seguidores de los equipos de fútbol.</p>				
+				<p>Insistimos en hacerles entender que la Ciberseguridad es realmente un proceso continuo. Te dicen que sí, pero al final acaban hablando de producto y de la confianza que les proporciona una marca concreta. Luego les preguntas si hacen revisiones de las configuraciones y actualizaciones de esos productos, como parte del proceso de gestión de la seguridad,  y te dicen que no, que no tienen tiempo. Que sería lo suyo pero que… el día a día les come. Te dan las gracias, pero prefieren quedarse como están. Con esa falsa sensación de seguridad, y la satisfacción de creer tener el tema controlado.</p>
+				<p>Tras pensar por qué suele pasar esto, creo que por lo general, en el ámbito empresarial, cuando alguien habla de plantear un proceso con el fin de mejorar algo, en muchas ocasiones da pereza sólo el pensarlo, porque plantear un proceso requiere parar, requiere pensar, requiere analizar… en definitiva, requiere un esfuerzo, y por ello se opta por seguir haciendo las cosas como se han hecho siempre, aunque en el fondo se sepa que no es lo correcto… y “Ya nos plantearemos eso de los procesos en un futuro”… un futuro que lamentablemente nunca acaba de llegar, “porque no tenemos tiempo…” nos decimos a nosotros mismos.</p>			
+				<img class="cb2" src="../media/ciber2.jpg"/>		
+				<p>Por tanto, cuando nuestro interlocutor de IT no tiene un perfil un poco más elevado como para hablar de proceso continuo y de estrategia en Ciberseguridad, entonces acudimos a la dirección de la organización para hablarles de la importancia de establecer una estrategia de ciberseguridad que de manera transversal y continua proteja a toda la empresa. Aquí es más fácil que el mensaje cale. Con las noticias que llegan casi a diario de cosas que están sucediendo a nuestro alrededor, la ciberseguridad es algo que realmente preocupa a la dirección. Pero entonces te dicen: “Bueno… no tenemos un presupuesto de ciberseguridad asignado, pero hablemos con la dirección de IT, a ver cómo estamos, porque… bueno lo de la ciberseguridad es un tema de informáticos, ¿no?”. Pues no, no lo es, les dices, pero aun así, te envían a hablar con IT. Entonces piensas: “A ver si tenemos suerte y no acabamos hablando de producto.”</p>
+				<details>
+					<p>Desde mi experiencia como Director de IT durante más de 12 años, y mi más corta experiencia en la venta de servicios relacionados con la seguridad de la información, creo que hasta que las organizaciones no interioricen la necesidad de asignar una parte del presupuesto a la ciberseguridad, hasta que no se entienda la importancia de establecer una estrategia en ciberseguridad que alcance a toda la organización, y hasta que los equipos de IT no entiendan que la ciberseguridad es un proceso continuo (y no un producto), lamentablemente los ciberdelincuentes seguirán ganando el partido por goleada.</p>
+				</details>			
+			</div>
+		</main>	
+		
+		<div class="pie">
+			<footer>
+				&copy; 2021 <a href="index.html" target="_blank">Alunma: Rita Mesa.</a>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

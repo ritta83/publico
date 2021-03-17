@@ -253,6 +253,11 @@ h1 + p {
 		height:auto;
 		object-fit:cover;
 	}
+	.centro{
+		text-align:center;
+		width:100%;
+		
+	}
 
 /*
 

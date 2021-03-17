@@ -1,8 +1,8 @@
 /* 
 JavaScript / jQuery
-web o pagina:
-autor:
-fecha:
+web o pagina: 2º trimestre DAM.
+autor:Rita Mª Mesa Jiménez
+fecha: 17 Marzo 2021.
 resumen:
 */
 
