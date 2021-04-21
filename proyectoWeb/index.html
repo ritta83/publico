@@ -3,9 +3,9 @@
 
 <!--
 HTML
-web o pagina: CSS3 y HTML5
-autor: Rita
-fecha: Abril 2021
+web o pagina: 2º trimestre DAM.
+autor: Rita Mª Mesa Jiménez
+fecha: 17 Marzo 2021
 -->
 
 <head>
@@ -13,57 +13,80 @@ fecha: Abril 2021
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
 	<!-- importante SEO para la etiqueta del navegador -->
-	<title>web</title>
+	<title>Titulo en Etiqueta del Navegador</title>
 	
 	<!-- una fuente de Google -->
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
-	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- una hoja de estilos externa-->
 	
 	<!-- una hoja de estilos personalizada-->
-	<link href="../css/modelo.css" rel="stylesheet"/>
+	<link href="../proyectoWeb/css/css-web.css" rel="stylesheet"/>
 	
 	<!-- iconos u otros elementos externos -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
 
 	
 	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
-	<script src="00-modelo.js"></script>
+	<script src="../proyectoWeb/js/modelo.js"></script>
 	
 	<!-- scripts personalizados Javascript o JQuery -->
+
 	<script>
-		// aqui el codigo ...
+		
 	</script>
+	<style>
+
+</style>
 </head>
 
 
 <body>
+<div class="w3-container w3-gray">
+  <h1>Lugares de Ocio en Malaga by RITA.</h1> 
+  <div class="navbar">
+  <p>Resize this responsive page!</p>
+				<nav>
+					<a href="index.html" onclick="sumar()">Inicio</a>
+					<a href="actualidad.html">Actualidad</a>
+					<a href="#">Blog</a>
+					<a href="#">Tendencia</a>
+					<a href="#">Contactar</a>
+				</nav>
+				<div id="visitas" class="visitas">Has visitado <span id="total">0</span> páginas</div>
+			</div>
+ 
+</div>
 
+<div class="w3-row-padding">
+  <div class="w3-third">
+    <h2>Naturaleza</h2>    
+    <p>A pesar de que la provincia de Málaga es la que menor extensión de Andalucía es una de las que más espacios protegidos tiene. Entre estos enclaves, están los parajes naturales, una declaración que se otorga a enclaves singulares por su singularidad geológica o por su biodiversidad, fundamentalmente. En concreto, en territorio malagueño son seis los parajes que forman parte de la Red de Espacios Naturales Protegidos de Andalucía. 
+	Entre ellos, hay desde los que no llegan ni a las 70 hectáreas de superficie, como es el caso de la Desembocadura del Guadalhorce, hasta los que tienen más de dos mil hectáreas. Como en otros espacios similares, es necesario cumplir las normas de respeto a la naturaleza.</p>
+  </div>
 
-	<!-- bloque de contenido de la pagina -->
-	<div class="grid-container">
-	  <div class="grid-item item1"><h1>PAGINA EN PROCESO...</h1></div>
-	  <div class="grid-item">Disculpen las molestias.</div>
-	  <div class="grid-item">
-		 <footer>
-			<br/><br/><br/>
-			<div>&copy; 2021 <a href="index.html" target="_blank">Alumna: Rita Mª Mesa Jimenez</a></div>
-		</footer>
-	   </div>  
-	</div>
+  <div class="w3-third">
+    <h2>Ocio</h2>
+    <p>Paris is the capital of France.</p> 
+    <p>The Paris area is one of the largest population centers in Europe,
+    with more than 12 million inhabitants.</p>
+  </div>
 
-
-	<!-- pie de pagina -->
-
-
-	<script>
-		// seccion de codigo javascript 
-
-	</script>
+  <div class="w3-third">
+    <h2>Parques</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area,
+    and the most populous metropolitan area in the world.</p>
+  </div>
+</div>
+<div class="pie">
+			<footer>
+				&copy; 2021 <a href="index.html" target="_blank">Alunma: Rita Mesa.</a>
+			</footer>
+		</div>
 </body>
 </html>
