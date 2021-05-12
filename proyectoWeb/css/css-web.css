@@ -10,126 +10,123 @@ o sea al final de este archivo o en la misma pagina html
 Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 
 */
+@font-face{
+	font-family:"Fraunces";
+	src.url(../css/Fraunces.ttf);
+}
+@font-face{
+	font-family:"Roboto";
+	src.url(../css/Roboto.ttf);
+}
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+
   box-sizing: border-box;
 }
 body {
-  color:#000000;
+  
   margin:0px;
   font-size:100%;
+  font-family:"Roboto";
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:"Fraunces";
+	
+}
+.container--flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.main-header{
+	padding:0 15px;
+}
+.main-title{
+	color:white;
+	
+}
+.color-span{
+	color:#EEAD33;
+}
+.icon-menu{
+	font-size:1.5em;
+	color: #EEAD33;
+	border:1px solid white;
+	display:block;
+	padding:5px 12px;
+	border-radius: 5px;
+}
+.menu{
+	display:none;
+}
+.banner{
+	background:url(../media/malaga1.jpg);
+	min-height:400px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:-999;
+	
+	
+	
+}
+.banner:before{
+	content:"";/*crear elemento a aprtir de otro*/
+	width:100%;
+	min-height:400px;
+	background: rgba(0,0,0,0.3);/*opasidad*/
+	position:absolute;
+	top:0;
+	left:0;
+}
+.banner__content{
+	width:100%;
+	padding:10px;
+	position:absolute;
+	top:60%;
+	left:50%;
+	transform: translateX(-50%)translateY(-50%);
+	color: white;
+	font-size:1.3em;
+}
+.main{
+	margin-top:350px;
+	padding:15px;
+	
+}
+.welcome{
+	text-align:center;
+	padding:20px 0;
+	
+}
+.welcome_-title{
+	font-size:2em;
+}
+.welcome_-txt{
+	font-size:1.3em;
+}
+.welcome__btn{
+	display:block;
+	border: 2px solid #EEAD33;
+	width:200px;
+	margin:auto;
+	padding:10px;
+	text-decoration:none;
+	color:#EEAD33;
+	font-size:1.2em;
+	font-weight:bold;
+	margin-top:30px;
+	transition: all 0.5s;
+}
+.welcome__btn: hover{
+	background:#EEAD33;
+	color: white;
+	
 }
 
 
-
-#dragbar{
-  position:absolute;
-  cursor: col-resize;
-  z-index:3;
-  padding:5px;
-}
-#shield {
-  display:none;
-  top:0;
-  left:0;
-  width:100%;
-  position:absolute;
-  height:100%;
-  z-index:4;
-}
-	.navbar a {
-		  float: left;
-		  font-size: 15px;		 
-		  font-family: "Segoe UI";
-		  color: white;
-		  text-align: center;
-		  padding: 45px 45px;
-		  text-decoration: none;
-		}
-#framesize span {
-  font-family:Consolas, monospace;
-}
-#container {
-  background-image: url(../proyectoWeb/media/malaga.jpg);
-  width:100%;
-  overflow:auto;
-  position:absolute;
-  top:138px;
-  bottom:0;
-
-  height:auto;
-}
-#textareacontainer, #iframecontainer {
-  float:left;
-  height:100%;
-  width:50%;
-}
-#textarea, #iframe {
-  height:100%;
-  width:100%;
-  padding-bottom:10px;
-  padding-top:1px;
-}
-#textarea {
-  padding-left:10px;
-  padding-right:5px;  
-}
-#iframe {
-  padding-left:5px;
-  padding-right:10px;  
-}
-#textareawrapper {
-  width:100%;
-  height:100%;
-  background-color: #ffffff;
-  position:relative;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-#iframewrapper {
-  width:100%;
-  height:100%;
-  -webkit-overflow-scrolling: touch;
-  background-color: #ffffff;
-  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-#textareaCode {
- 
-  font-family: consolas,"courier new",monospace;
-  font-size:15px;
-  height:100%;
-  width:100%;
-  padding:8px;
-  resize: none;
-  border:none;
-  line-height:normal;    
-}
-
-#iframeResult, #iframeSource {
-  background-color: #ffffff;
-  height:100%;
-  width:100%;  
-}
-#textarea.horizontal{
-  height:100%;
-  padding-left:10px;
-  padding-right:10px;
-}
-#iframe.horizontal{
-  height:100%;
-  padding-right:10px;
-  padding-bottom:10px;
-  padding-left:10px;  
-}
-#container.horizontal{
-	background-image: url(../proyectoWeb/media/malaga.jpg);
-  min-height:200px;
-  margin-left:0;
-}
-
-  .w3-dropdown-content {width:350px}
   
-@media screen and (max-width: 727px) {
+/*@media screen and (max-width: 727px) {
   .trytopnav {top:70px;}
   #container {top:108px;}
 
@@ -144,40 +141,10 @@ body {
   #container     {min-width:320px;}
   .stack         {display:none;}
   #tryhome       {display:block;}
-}
+}*/
 
 
-.fa {
-  display:inline-block;
-  font:normal normal normal 14px/1 FontAwesome;
-  font-size:inherit;
-  text-rendering:auto;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  transform:translate(0,0);
-}
 
 
-#saveLoader {
-    margin:20px;
-}
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-
-		
-			
-	
-	.pie {
-	
-		  grid-column: 1 / span 2;
-		  grid-row: 4 / span 1;
-		  padding:0 0 0 15px;	  
-		  position: relative;
-		  left: 45px;
-		}
-		
 		
