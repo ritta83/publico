@@ -32,6 +32,10 @@ h1,h2,h3,h4,h5,h6{
 	font-family:"Fraunces";
 	
 }
+img{
+	display:block;
+	max-width.100%;
+}
 
 .container--flex{
   display:flex;
@@ -116,19 +120,29 @@ nav > a:hover {
 }
 .main{
 	margin-top:350px;
-	padding:15px;
+	
 	
 }
 .welcome{
 	text-align:center;
-	padding:20px 0;
+	padding:20px;
 	
 }
-.welcome_-title{
+.welcome__title{
 	font-size:2em;
 }
-.welcome_-txt{
-	font-size:1.3em;
+.welcome__title{
+	content:"";
+	width:30%;
+	position: absolute;
+	top:-20px;
+	left:35%;
+	height: 3px;
+	background: #EEAD33;
+}
+.welcome__txt{
+	font-size:1.2em;
+	color: #777;
 }
 .welcome__btn{
 	display:block;
@@ -146,6 +160,43 @@ nav > a:hover {
 .welcome__btn: hover{
 	background:#EEAD33;
 	color: white;
+	
+}
+
+.pagina2__item{
+	position:relative;
+}
+.pagina2__item:before{
+		content:"";/*crear elemento a aprtir de otro*/
+	width:100%;
+	min-height:400px;
+	background: rgba(0,0,0,0.3);/*opasidad*/
+	position:absolute;
+	top:0;
+	left:0;
+}
+.pagina2__title{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%)translateY(-50%);
+	color: white;
+	font-size:1.8em;
+	width:100%;
+	text-align: center;
+	
+}
+.pagina__title: before{
+	content:"";
+	width:30%;
+	position: absolute;
+	top:-20px;
+	left:35%;
+	height: 3px;
+	background: #EEAD33;
+}
+.pagina2__img{
+	
 	
 }
 
