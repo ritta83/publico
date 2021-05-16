@@ -1,6 +1,6 @@
 /* 
 JavaScript / jQuery
-web o pagina: Proyecto Final
+web o pagina: 3º trimestre DAM.
 autor: Rita Mª Mesa Jimenez
 fecha: Mayo de 2021
 */
@@ -46,7 +46,7 @@ function miFuncion(xml) {
 
   if (comprobacion == true) {
     sessionStorage.setItem("usuario", nombre);
-    window.location.replace("tradiciones.html");
+    window.location.replace("leer.html");
   } else {
     window.alert("Usuario o contraseña incorrectos");
   }

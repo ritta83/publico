@@ -32,10 +32,29 @@ h1,h2,h3,h4,h5,h6{
 	font-family:"Fraunces";
 	
 }
+
 .container--flex{
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+.barra-navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+nav > a {
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav > a:hover {
+    color: black;
 }
 .main-header{
 	padding:0 15px;
@@ -57,6 +76,12 @@ h1,h2,h3,h4,h5,h6{
 }
 .menu{
 	display:none;
+}
+.login{
+	display:none;
+	width:130px;
+	background-color:#04AA6D;
+	color:white;border-radius:25px;
 }
 .banner{
 	background:url(../media/malaga1.jpg);
@@ -126,22 +151,14 @@ h1,h2,h3,h4,h5,h6{
 
 
   
-/*@media screen and (max-width: 727px) {
-  .trytopnav {top:70px;}
-  #container {top:108px;}
+@media screen and (max-width: 727px) {
+  
+  #container--flex{
+	  top:108px;
+	  }
 
 }
-@media screen and (max-width: 467px) {
-  .trytopnav {top:60px;}
-  #container {top:98px;}
-  .w3-dropdown-content {width:100%}
-}
-@media only screen and (max-device-width: 768px) {
-  #iframewrapper {overflow: auto;}
-  #container     {min-width:320px;}
-  .stack         {display:none;}
-  #tryhome       {display:block;}
-}*/
+
 
 
 

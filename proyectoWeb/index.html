@@ -3,7 +3,7 @@
 
 <!--
 HTML
-web o pagina: 2º trimestre DAM.
+web o pagina: 3º trimestre DAM.
 autor: Rita Mª Mesa Jiménez
 fecha: 17 Marzo 2021
 -->
@@ -13,12 +13,13 @@ fecha: 17 Marzo 2021
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
 	<!-- importante SEO para la etiqueta del navegador -->
-	<title>Lugares de Ocio</title>
+	<title>PROYECTO FINAL</title>
 	
 	<!-- una fuente de Google -->
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com"target="_self"/>
 	<!-- una hoja de estilos externa-->
 	
 	<!-- una hoja de estilos personalizada-->
@@ -46,10 +47,16 @@ fecha: 17 Marzo 2021
 
 
 <body>
-<header class="main-header">
+<header id="main-header">
 <div class="container container--flex">
    <h1 class="main-tittle"><span class="color-span">LUGARES DE OCIO</span> EN MALAGA.</h1>
-   <a href="../proyectoWeb/paginas/login.html">Login</a>
+   <div id="barra-navegacion">        
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="./paginas/login.html">Login</a>
+            </nav>
+        </div>
+
   </header>
   <nav class="main-nav">
      <span class="icnon-menu" id="btn_menu"><i class="fas fa-bars"></i></span>
@@ -83,9 +90,12 @@ fecha: 17 Marzo 2021
 		tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario 
 		de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. 
 		Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
-		<a href="" class="welcome_-btn">LEER MAS</a>
+		<a class="welcome_-btn" href="../proyectoWeb/paginas/leer.html">LEER MAS</a>
 		</section>
 		</main>
-
+ <!--Footer-->
+   <footer>
+    <p>Rita Mª Mesa Jimenez || Copyright © 2021 - <span class="color-span">LUGARES DE OCIO</span></p>
+  </footer>
 </body>
 </html>
