@@ -1,29 +1,53 @@
 /* 
 JavaScript / jQuery
-web o pagina:
-autor:
-fecha:
-resumen:
+web o pagina: Proyecto Final
+autor: Rita Mª Mesa Jimenez
+fecha: Mayo de 2021
 */
 
-	
-	$(document).ready(function() {
-		if (sessionStorage.suma) {
-		  // si existe el valor lo muestro
-		  $("#total").text(sessionStorage.suma);
-		} else {
-			// si NO existe el valor lo seteo y lo muestro
-		  sessionStorage.setItem("suma", 1);
-		  $("#total").text(sessionStorage.suma);
-		}
-	});
-	
-	function sumar(){
-		if (sessionStorage.suma) {
-		  // si existe el valor le sumo 1
-		  sessionStorage.suma = Number(sessionStorage.suma) + 1;
-		} else {
-		  sessionStorage.setItem("suma", 1);
-		}
-		$("#total").text(sessionStorage.suma);
-	}
+
+
+function comprobarUsuario(){
+  if(sessionStorage.getItem("usuario").length>0){
+    document.getElementById("mensaje").style.display="none";
+    document.getElementById("contenido").style.display="block";
+  }
+}
+
+window.onload=comprobarUsuario();
+
+function leerXML() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      miFuncion(this);
+    }
+  };
+  xhr.open("GET", "https://ritta83.github.io/publico/proyectoweb/registrados.xml", true);
+  xhr.send();
+}
+
+function miFuncion(xml) {
+  var i;
+  var nombre = document.forms["formulario-login"]["nombre-usuario"].value;
+  var contraseña = document.forms["formulario-login"]["contraseña-usuario"].value;
+  var xmlDoc = xml.responseXML;
+  var x = xmlDoc.getElementsByTagName("usuario");
+  comprobacion = false;
+
+  for (i = 0; i < x.length; i++) {
+    if (x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue == nombre) {
+      if (x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue == contraseña) {
+        comprobacion = true;
+        break;
+      }
+    }
+  }
+
+  if (comprobacion == true) {
+    sessionStorage.setItem("usuario", nombre);
+    window.location.replace("tradiciones.html");
+  } else {
+    window.alert("Usuario o contraseña incorrectos");
+  }
+}
