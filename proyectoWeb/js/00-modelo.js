@@ -46,7 +46,7 @@ function miFuncion(xml) {
 
   if (comprobacion == true) {
     sessionStorage.setItem("usuario", nombre);
-    window.location.replace("leer.html");
+    window.location.replace("../paginas/leer.html");
   } else {
     window.alert("Usuario o contraseña incorrectos");
   }
