@@ -13,7 +13,7 @@ fecha: 17 Marzo 2021
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
 	<!-- importante SEO para la etiqueta del navegador -->
-	<title>PROYECTO FINAL</title>
+	<title>PROYECTO WEB FINAL</title>
 	
 	<!-- una fuente de Google -->
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -50,25 +50,20 @@ fecha: 17 Marzo 2021
 <header id="main-header">
 <div class="container container--flex">
    <h1 class="main-tittle"><span class="color-span">LUGARES DE OCIO</span> EN MALAGA.</h1>
-   <div id="barra-navegacion">        
+   <!--<div id="barra-navegacion">        
             <nav>
                 <a href="index.html">Inicio</a>
                 <a href="./paginas/login.html">Log in</a>
             </nav>
-        </div>
+        </div>-->
 
-  </header>
   <nav class="main-nav">
      <span class="icnon-menu" id="btn_menu"><i class="fas fa-bars"></i></span>
-     <ul class="menu" id="menu">
-	 <li class="menu__item"><a href="" class="menu__link">
-	 <span>Naturaleza</span></a></li>
-	 <li class="menu__item"><a href="" class="menu__link">
-	 <span>Parques</span></a></li>
-	 <li class="menu__item"><a href="" class="menu__link">
-	 <span>Ocio</span></a></li>
-	 <li class="menu__item"><a href="" class="menu__link">
-	 <span>Contacto</span></a></li>
+	 <ul class="menu" id="menu">
+	 <li class="menu__item"><a href="index.htlm" class="menu__link menu--select"><span>Inicio</span></a></li>
+	 <li class="menu__item"><a href="" class="menu__link"><span>Ofertas</span></a></li>
+	 <li class="menu__item"><a href="" class="menu__link"><span>Contacto</span></a></li>
+	 <li class="menu__item"><a href="./paginas/login.html" class="menu__link"><span>Login</span></a></li>
 	 
 	 <div class="nav-social">
 	   <a href=""><i class="fab fa-facebook"></i></a>
@@ -79,47 +74,75 @@ fecha: 17 Marzo 2021
   </nav>
 </div>
 </header>
-	 <div class="banner">
-	  <div class="banner__content">
-	 <h2 class="banner__titulo">01</h2>
-	 <p class="banner__txt">frase descripcion de la pagina</p>
-	 </div>	
+  <div class="banner">
+	<div class="banner__content">
+	  <div id="container">
+	   <h2 class="banner__titulo">01</h2>
+	   <p class="banner__txt">Descubre todo lo que una sencilla ciudad te puede enseñar.</p>
+	  </div>	
 	</div>	
     <main class="main">
      <section class="welcome">
 		<h2 class="welcome_-title">BIENVENIDO</h2>
-		<p class="welcome__txt">Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, 
-		ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás 
-		estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet 
-		tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario 
-		de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. 
-		Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.</p>
+		<p class="welcome__txt">Cuando vengas a Málaga, por qué no descubrir la provincia y sus atracciones turísticas. Hay muchas cosas que hacer en Málaga y a lo largo de la Costa del Sol para divertirse. 
+		Los mejores lugares que no deberías perderte. Te ofrecemos la mayor información sobre el entretenimiento y el ocio en Málaga. En esta página vamos a nombrar unas cuantas cosas que puedes hacer, 
+		pero si sigues los enlaces descubrirás muchas más.</p>
 		<a class="welcome__btn" href="../proyectoWeb/paginas/leer.html">LEER MAS</a>
 		</section>
-		<section id="pagina2">
-		 <div id="pagina2__item">
-		   <h3 id="pagina2__title">NATURALEZA</h3>
-		   <img src="../proyectoWeb/media/caminitodelrey.jpg" alt="" class="pagina2__img">
+		
+		<section id="container-foto">
+		 <div id="foto__item">
+		   <h3 id="foto__title">NATURALEZA</h3>
+		   <img src="../proyectoWeb/media/caminitodelrey.jpg" alt="" class="foto__img">
 		 </div>
-		 <div id="pagina2__item">
-		   <h3 id="pagina2__title">PARQUES Y JARDINES</h3>
-		   <img src="../proyectoWeb/media/caminitodelrey.jpg" alt="" class="pagina2__img">
+		 <div id="foto__item">
+		   <h3 id="foto__title">PARQUES Y JARDINES</h3>
+		   <img src="../proyectoWeb/media/jardines.jpg" alt="" class="foto__img">
 		 </div>
-		 <div id="pagina2__item">
-		   <h3 id="pagina2__title">OCIO</h3>
-		   <img src="../proyectoWeb/media/caminitodelrey.jpg" alt="" class="pagina2__img">
+		 <div id="foto__item">
+		   <h3 id="foto__title">OCIO</h3>
+		   <img src="../proyectoWeb/media/divernostrum.jpg" alt="" class="foto__img">
 		 </div>
-		 <div id="pagina2__item">
-		   <h3 id="pagina2__title">CULTURA</h3>
-		   <img src="../proyectoWeb/media/caminitodelrey.jpg" alt="" class="pagina2__img">
+		 <div id="foto__item">
+		   <h3 id="foto__title">CULTURA</h3>
+		   <img src="../proyectoWeb/media/cathedral.jpg" alt="" class="foto__img">
 		 </div>
 		</section>
 		
-		
+		<section id="container-tips">
+		  <div id="design__item">
+		   <h3 id="design__title">Consulta las ofertas y novedades</h3>
+		   <img src="" alt="" class="foto__img">
+		  </div>
+		  <div id="container-box">
+		   <div id="box">
+		    <div id="box__icon"><i id="fas-fa-cog"></i></div>
+		     <div id="box__content">
+		     <h3 id="box__title">MUSEOS</h3>
+		     <p id="box__title">Deja que todos tus sentidos disfruten de la gran belleza de nuestros museos.</p>
+		   </div>
+		  </div>
+		  <div id="box">
+		    <div id="box__icon"><i id="fas-fa-wrench"></i></div>
+		     <div id="box__content">
+		     <h3 id="box__title">PLAYAS</h3>
+		     <p id="box__title">Relajate y descubre lo que nuestras playas esconden,no son solo agua y arena.</p>
+		   </div>
+		  </div>
+		 </div>
+		</section>
+		<section ="newsletter">
+		  <h2 id="section__title">INFORMACION</h2>
+		  <form action="" method="post" id="form">
+		    <input type="email" placeholder="Email" id="form__mail">
+			<input type="submit" id="form__submit" value="Suscribe">
+		  </form>
+		 </section>				
 		</main>
  <!--Footer-->
    <footer>
     <p>Rita Mª Mesa Jimenez || Copyright © 2021 - <span class="color-span">LUGARES DE OCIO</span></p>
   </footer>
+  <1-- <script src="js.menu.js"></script>
 </body>
 </html>

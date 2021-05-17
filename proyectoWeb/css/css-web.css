@@ -11,7 +11,7 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 
 */
 @font-face{
-	font-family:"Fraunces";
+	font-family:"Frauces";
 	src.url(../css/Fraunces.ttf);
 }
 @font-face{
@@ -25,13 +25,141 @@ Se incluyen los principales SELECTORES SIMPLES; hay más combinaciones...
 body {
   
   margin:0px;
-  font-size:100%;
   font-family:"Roboto";
 }
 h1,h2,h3,h4,h5,h6{
-	font-family:"Fraunces";
+	font-family:"Frauces";
 	
 }
+p{
+	line-height:25px;
+}
+.container--flex{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*estilo del header*/
+.main-header{
+	padding:0 15px;
+}
+.main-title{
+	color:white;
+	
+}
+.color-span{
+	color:#EEAD33;
+}
+/*estilo del menu*/
+.icon-menu{
+	font-size:1.5em;
+	color: #EEAD33;
+	border:1px solid white;
+	display:block;
+	padding:5px 12px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.menu{
+	position: absolute;
+	top: 80px;
+	left:0;
+	background: #212121;
+	width:100%;
+	list-style: none;
+	padding: 20px;
+	margin: 0;
+	z-index:999;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.5s;
+}
+.menu__item{
+	padding: 20px;
+	text-align: center;
+	width: 150px;
+	margin: auto;
+}
+.menu__link{
+	color: white;
+	text-decoration: none;
+	position: relative;
+	display: block;
+}
+.menu__link: before{
+	content:"";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-right: 2px solid #EEAD33;
+	border-top: 2px solid #EEAD33;
+    top: 0;	
+	right: 0;
+	opacity: 0;	
+}
+.menu__link: after{
+	content:"";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-right: 2px solid #EEAD33;
+	border-top: 2px solid #EEAD33;
+    top: 0;	
+	right: 0;
+	opacity: 0;	
+}
+.menu__link span:before{
+	content:"";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-right: 2px solid #EEAD33;
+	border-top: 2px solid #EEAD33;
+    top: 0;	
+	right: 0;
+	opacity: 0;	
+}
+.menu__link span:after{
+	content:"";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-right: 2px solid #EEAD33;
+	border-top: 2px solid #EEAD33;
+    top: 0;	
+	right: 0;
+	opacity: 0;	
+}
+.menu__link span{
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+.menu__link--select: before, .menu__link--select: after, .menu__link--select span:before, menu__link--select
+span:after{
+	opacity: 1;
+}
+.menu__item:hover .menu__link:before, menu__item:hover, .menu__link:after, .menu__item:hover, menu__link
+span:before, .menu__item:hover, menu__link span:after{
+	opacity:1;
+}
+.nav-social{
+	display: flex;
+	justify-content: center;	
+}
+.nav-social__item{
+	width: 35px;
+	height: 35px;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	border-radius: 50%;
+	margin: 10px
+}
+
+	
+	
+
 img{
 	display:block;
 	max-width.100%;
@@ -60,27 +188,8 @@ nav > a {
 nav > a:hover {
     color: black;
 }
-.main-header{
-	padding:0 15px;
-}
-.main-title{
-	color:white;
-	
-}
-.color-span{
-	color:#EEAD33;
-}
-.icon-menu{
-	font-size:1.5em;
-	color: #EEAD33;
-	border:1px solid white;
-	display:block;
-	padding:5px 12px;
-	border-radius: 5px;
-}
-.menu{
-	display:none;
-}
+
+
 .login{
 	display:none;
 	width:130px;
@@ -118,10 +227,10 @@ nav > a:hover {
 	color: white;
 	font-size:1.3em;
 }
+
+
 .main{
 	margin-top:350px;
-	
-	
 }
 .welcome{
 	text-align:center;
@@ -162,7 +271,10 @@ nav > a:hover {
 	color: white;
 	
 }
-
+.pagina2{
+	margin:20px 0;
+	
+}
 .pagina2__item{
 	position:relative;
 }
@@ -188,10 +300,19 @@ nav > a:hover {
 }
 .pagina__title: before{
 	content:"";
-	width:30%;
+	width:35%;
 	position: absolute;
 	top:-20px;
-	left:35%;
+	left:30%;
+	height: 3px;
+	background: #EEAD33;
+}
+.pagina__title: after{
+	content:"";
+	width:35%;
+	position: absolute;
+	bottom:-20px;
+	left:30%;
 	height: 3px;
 	background: #EEAD33;
 }
@@ -202,11 +323,32 @@ nav > a:hover {
 
 
   
-@media screen and (max-width: 727px) {
-  
-  #container--flex{
-	  top:108px;
+@media screen and (min-width: 768px) {
+  .menu{
+	  position: static;
+	  opacity:1;
+	  visibility: visible;
+	  display: flex;
+	  background:none;
+	  font-size: .8em;
+	  
+  }
+  .menu__item{
+	  width:auto;
+  }
+  .icon-menu{
+	  display:none;
+  }
+  .banner{
+	  min-height:500px;
+  }
+  .banner.before{
+	  min-height:500px;
+  }
+   .main{
+	 margin-top:400px
 	  }
+  
 
 }
 
