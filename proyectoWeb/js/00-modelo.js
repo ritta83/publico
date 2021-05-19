@@ -1,53 +1,124 @@
 /* 
-JavaScript / jQuery
-web o pagina: 3º trimestre DAM.
-autor: Rita Mª Mesa Jimenez
-fecha: Mayo de 2021
+JavaScript / XML
+web o pagina: ejercicios de XML y JavaScript
+autor: Prof. Carlos Boni
+fecha: 19 mayo 2021
+resumen: lectura y carga en array bidimensional de un XML
+
+sintesis:
+la lógica se basa en el uso de tres variables de tipo sessionStorage
+usuarioLogueado : si existe, su valor es el nombre de usuario en sesion
+usuarioIntentando y claveIntentando: si existen significa que debemos
+validarlas para crear usuarioLogueado si corresponde
 */
 
+// variable global de la pagina
 
+// las siguientes variables estarán como sessionStorage
+let usrIntentando = "";
+let claveIntentando = "";
 
-function comprobarUsuario(){
-  if(sessionStorage.getItem("usuario").length>0){
-    document.getElementById("mensaje").style.display="none";
-    document.getElementById("contenido").style.display="block";
-  }
+function controlar(){
+	// determinamos en qué estado se carga la página:
+	// 1 - sin usuario
+	// 2 - usuario intentando ingresar
+	// 3 - usuario con sesion iniciada
+	$("#ingresar").show();
+	$("#desconectar").hide();
+			
+	if (sessionStorage.getItem("usuarioLogueado")) {
+		// estado 3 de nuestro diagrama de estados - con usuario
+		// estamos cargando la página teniendo un usuario logueado previamente
+		// y con la sesión activa pues no se ha desconectado aún
+		// ocultamos formulario de login y mostramos desconectar
+		$("#ingresar").hide();
+		$("#desconectar").show();	
+		
+	} else {
+		if (sessionStorage.getItem("usuarioIntentando")) {
+			// estado 2 de nuestro diagrama de estados - transición
+			// estamos recargando luego de que haya un intento de login
+			// debemos validar si el usuario existe
+			validarXML();
+			// tardo un poco en recargar para dar tiempo a AJAX?
+			for(let timer=1;timer<1000000;timer++);
+			location.reload();
+			
+		} else {
+			// estado 1 de nuestro diagrama de estados - sin usuario
+			// mostramos formulario de login y ocultamos desconectar
+			$("#ingresar").show();
+			$("#desconectar").hide();
+		}
+	}
 }
+	
+	function intentar(){
+		if (typeof(Storage) !== "undefined") {
+		  
+		  // oculta la opción de login 
+		  $("#ingresar").hide();
+		  
+		  // Almacena un valor usando el método setItem del objeto localStorage
+		  var x=document.forms["miFormulario"]["formUsuario"].value;
+		  var y=document.forms["miFormulario"]["formClave"].value;
+		  sessionStorage.setItem("usuarioIntentando", x);
+		  sessionStorage.setItem("claveIntentando", y);
+		  
+		  // ya tengo en memoria webStorage lo que puso en el formulario
+		  // al recargarse la página podré recordar esta información
 
-window.onload=comprobarUsuario();
+		} else {
+		  document.getElementById("mensaje").innerHTML = "Este navegador no soporta web storage...";
+		}
+	}
+	
+	function validarXML() {
+		
+		// lee desde aquí.
+		usuarioIntentando=sessionStorage.getItem("usuarioIntentando");
+		claveIntentando=sessionStorage.getItem("claveIntentando");
+		sessionStorage.removeItem("usuarioIntentando");
+		sessionStorage.removeItem("claveIntentando");
+		
+//		según https://developer.mozilla.org/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+//		cambio el orden y añado responseType
 
-function leerXML() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      miFuncion(this);
-    }
-  };
-  xhr.open("GET", "https://ritta83.github.io/publico/proyectoweb/registrados.xml", true);
-  xhr.send();
-}
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "https://ritta83.github.io/publico/proyectoweb/registrados.xml", true);
+		xhr.responseType = 'document';
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				miFuncion(this);
+			}
+		};
+		xhr.send();
+	}
 
-function miFuncion(xml) {
-  var i;
-  var nombre = document.forms["formulario-login"]["nombre-usuario"].value;
-  var contraseña = document.forms["formulario-login"]["contraseña-usuario"].value;
-  var xmlDoc = xml.responseXML;
-  var x = xmlDoc.getElementsByTagName("usuario");
-  comprobacion = false;
+	function miFuncion(xml) {
+	  var i;
+	  var usrNom;
+	  var usrPsw;
+	  var usuario = [];
+	  var xmlDoc = xml.responseXML;
+	  var x = xmlDoc.getElementsByTagName("usuario");
+	  sessionStorage.removeItem("usuarioLogueado");
+	  
+	  for (i = 0; i <x.length; i++) { 
+		// leo las etiquetas que me interesan del objeto
+		usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+		usrPsw = x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue;
+		// actualizo la tabla de visualización
+		if ((usrNom == usuarioIntentando) && (usrPsw == claveIntentando)) {
+		  // destaca el usuario que coincide con lo que buscamos
+		  sessionStorage.setItem("usuarioLogueado",usuarioIntentando);
+		}
+	  }
+	}
 
-  for (i = 0; i < x.length; i++) {
-    if (x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue == nombre) {
-      if (x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue == contraseña) {
-        comprobacion = true;
-        break;
-      }
-    }
-  }
-
-  if (comprobacion == true) {
-    sessionStorage.setItem("usuario", nombre);
-    window.location.replace("../paginas/leer.html");
-  } else {
-    window.alert("Usuario o contraseña incorrectos");
-  }
-}
+	function desconectar(){
+		sessionStorage.removeItem("usuarioLogueado");
+		sessionStorage.removeItem("usuarioIntentando");
+		sessionStorage.removeItem("claveIntentando");
+		location.reload();
+	}
