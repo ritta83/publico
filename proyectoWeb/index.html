@@ -18,8 +18,7 @@ fecha: 17 Marzo 2021
 	<!-- una fuente de Google -->
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-	<link href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com"target="_self"/>
+	<link href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" target="_self"/>
 	<!-- una hoja de estilos externa-->
 	
 	<!-- una hoja de estilos personalizada-->
@@ -27,67 +26,67 @@ fecha: 17 Marzo 2021
 	
 	<!-- iconos u otros elementos externos -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet"/>
 	
 	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
 	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
-	<script src="../proyectoWeb/js/00-modelo.js"></script>
+	<script src="../proyectoWeb/js/00-modelo.js"></script>	
 	
 	<!-- scripts personalizados Javascript o JQuery -->
-
-	<script>
+    <!-- <script src="js.menu.js">
+    let btnMenu = document.getElementById('btn-menu');
+    let menu = documnent.getElementById('menu');
+    btnMenu.addEventListener('click', function(){
+    menu.classList.toggle('mostrar');
+     });-->
+	
 		
-	</script>
-	<style>
-
-</style>
 </head>
 
-
 <body>
-<header class="main-header">
-<div class="container container--flex">
-   <h1 class="main-tittle"><span class="color-span">LUGARES DE OCIO</span> EN MALAGA.</h1>
-  
-  <nav class="main-nav">
-     <span class="icon-menu" id="btn_menu"><i class="fas fa-bars"></i></span>
-	 <ul class="menu" id="menu">
-	 <li class="menu__item">
-	   <a href="" class="menu__link menu--select"><span>Inicio</span></a>
-	 </li>
-	 <li class="menu__item">
-	   <a href="../proyectoWeb/paginas/leer.html" class="menu__link"><span>Ofertas</span></a>
-	 </li>
-	 <li class="menu__item">
-	   <a href="" class="menu__link"><span>Contacto</span></a>
-	 </li>
-	 <li class="menu__item">
-	   <a href="../proyectoWeb/paginas/dolly.html" class="menu__link"><span> Efecto-Dolly</span></a>
-	 </li>
-	 <li class="menu__item">
-	   <a href="./paginas/login.html" class="menu__link"><span>Login</span></a>
-	   </li>
+  <header class="main-header">
+    <div class="container container--flex">
+     <h1 class="main-tittle"><span class="color-span">LUGARES DE OCIO</span> EN MALAGA.</h1>
+     </header>
+      <nav class="main-nav">
+       <span class="icon-menu" id="btn_menu"><i class="fas fa-bars"></i></span>
+	   <ul class="menu" id="menu">
+	     <li class="menu__item">
+	      <a href="" class="menu__link menu--select"><span>Inicio</span></a>
+	     </li>
+	     <li class="menu__item">
+	      <a href="../proyectoWeb/paginas/leer.html" class="menu__link"><span>Ofertas</span></a>
+	     </li>
+	     <li class="menu__item">
+	      <a href="" class="menu__link"><span>Contacto</span></a>
+	     </li>
+	     <li class="menu__item">
+	      <a href="../proyectoWeb/paginas/dolly.html" class="menu__link"><span> Efecto-Dolly</span></a>
+	     </li>
+	     <li class="menu__item">
+	      <a href="./paginas/login.html" class="menu__link"><span>Login</span></a>
+	     </li>
 	  </ul>	
   </nav>
 </div>
-</header>
+</head>
   <div class="banner">
 	<div class="banner__content">
-	  <div class="container">
 	   <h2 class="banner__title">01</h2>
 	   <p class="banner__txt">Descubre todo lo que una sencilla ciudad te puede enseñar.</p>
 	  </div>	
-	</div>	
+	</div>
+	
     <main class="main">
-     <section class="welcome">
+      <section class="welcome">
 		<h2 class="section__title">BIENVENIDO</h2>
 		<p class="welcome__txt">Cuando vengas a Málaga, por qué no descubrir la provincia y sus atracciones turísticas. Hay muchas cosas que hacer en Málaga y a lo largo de la Costa del Sol para divertirse. 
 		Los mejores lugares que no deberías perderte. Te ofrecemos la mayor información sobre el entretenimiento y el ocio en Málaga. En esta página vamos a nombrar unas cuantas cosas que puedes hacer, 
 		pero si sigues los enlaces descubrirás muchas más.</p>
 		<a href="" class="welcome__btn" href="">LEER MAS</a>
-		</section>
+	  </section>
 		
 		<section class="container-design">
 		 <div class="design__item">
@@ -112,23 +111,25 @@ fecha: 17 Marzo 2021
 		  <div class="design__item">
 		   <h3 class="design__title">Consulta las ofertas y novedades</h3>
 		  </div>
+		  
+		 
 		  <div class="container-box">
 		   <div class="box">
 		    <div class="box__icon"><i id="fas-fa-cog"></i></div>
 		     <div class="box__content">
-			 <h2 class="design__title">Consulta las ofertas y novedades</h2>
-		     <h3 class="box__title">MUSEOS</h3>
-		     <p class="box__txt">Deja que todos tus sentidos disfruten de la gran belleza de nuestros museos.</p>
+			  <h3 class="box__title">MUSEOS</h3>
+		      <p class="box__txt">Deja que todos tus sentidos disfruten de la gran belleza de nuestros museos.</p>
+		   </div>
 		   </div>
 		  </div>
-		  <div class="box">
-		    <div class="box__icon"><i id="fas-fa-wrench"></i></div>
+		  <div class="box">		  
 		     <div class="box__content">
 		     <h3 class="box__title">PLAYAS</h3>
 		     <p class="box__txt">Relajate y descubre lo que nuestras playas esconden,no son solo agua y arena.</p>
 		   </div>
-		  </div>
-		 </div>
+		  </div>	
+        </div>		 
+		
 		</section>
 		<section ="newsletter">
 		  <h2 class="section__title">PARA MAS INFORMACION</h2>
@@ -136,18 +137,17 @@ fecha: 17 Marzo 2021
 		    <input type="email" placeholder=" Escribe tu Email" class="form__mail">
 			<input type="submit" class="form__submit" value="Enviar">
 		  </form>
-		  
 		 </section>				
 		</main>
- <!--Footer-->
-   <section class="footer">
-    <h2  class="section__title">Rita Mª Mesa Jimenez || Copyright © 2021 </h2><span class="color-span">LUGARES DE OCIO</span></p>
-	 <div class="nav-social">
-	   <a href=""><i class="fab fa-facebook"></i></a>
-	   <a href=""><i class="fab fa-instagram"></i></a>
-	   <a href=""><i class="fab fa-whatsapp"></i></a>
-	  </div> 
-  </section>
-  <!-- <script src="js.menu.js"></script>-->
-</body>
+     <!--pie de pagina-->
+    <section class="footer">
+      <h2  class="section__title">Rita Mª Mesa || Copyright © 2021 </h2><span class="color-span">LUGARES DE OCIO</span></p>
+	   <div class="nav-social">
+	     <a href="" class="nav-social__item"><i class="fab fa-facebook-f"></i></a>
+	     <a href="" class="nav-social__item"><i class="fab fa-instagram"></i></a>
+	     <a href="" class="nav-social__item"><i class="fab fa-whatsapp"></i></a>
+	   </div> 
+   </section>
+
+ </body>
 </html>
