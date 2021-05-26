@@ -324,6 +324,10 @@ p {
   width: 70%;
 }
 
+#login{
+  display: inline-block;
+}
+
 #logout{
   display: none;
 }
