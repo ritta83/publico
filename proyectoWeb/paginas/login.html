@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="../css/css-web.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,12 +16,13 @@
 <input type="password" id="contraseña-usuario" name="contraseña-usuario" placeholder="Contraseña">
 
 <input type="submit" value="enviar" onclick="leerXML()">
-
+<input type="submit" value="MODO OSCURO" onclick="modoNoche()">
+<input type="submit" value="RESTABLECER" onclick="modoDia()">
 </form>
 
 </body>
 
 <!--Enlace a JavaScript-->
 <script src="../js/00-modelo.js"></script>
-
+<script src="../js/cambios.js"></script>
 </html>
