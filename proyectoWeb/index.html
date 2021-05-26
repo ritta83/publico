@@ -7,7 +7,7 @@
 	
 	<!-- una fuente de Google -->
 	<link href="https://pixabay.com/es/"
-	<link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.gstatic.com"/>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
 	<link href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" target="_self"/>
 	<!-- una hoja de estilos externa-->
@@ -25,13 +25,9 @@
 	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
 	<script src="../proyectoWeb/js/01-modelo.js"></script>	
 	
-	<!-- scripts personalizados Javascript o JQuery -->
-    <!-- <script src="js.menu.js">
-    let btnMenu = document.getElementById('btn-menu');
-    let menu = documnent.getElementById('menu');
-    btnMenu.addEventListener('click', function(){
-    menu.classList.toggle('mostrar');
-     });-->
+	<!-- scripts personalizados Javascript o JQuery 
+     <script src="../proyectoWeb/js/menu.js">-->
+    
 	
 		
 </head>
@@ -41,18 +37,14 @@
       <div class="container container--flex">
         <h1 class="main-title"><span class="color-span">LUGARES DE OCIO EN</span> MALAGA</h1>
         <nav class="main-nav">
-          <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+         
           <ul class="menu" id="menu">
-            <li class="menu_item"><a href="" class="menulink menu_link--select"><span>Inicio</span></a></li>
+            <li class="menu_item"><a href="" class="menu_link--select"><span>Inicio</span></a></li>
             <li class="menu_item"><a href="" class="menu_link"><span>Contacto</span></a></li>
+            <li class="menu_item"><a href="" class="menu_link"><span>Destacados</span></a></li>
             <li class="menu_item"><a href="../proyectoWeb/paginas/dolly.html" class="menu_link"><span>Efecto Dolly</span></a></li>
             <li class="menu_item"><a href="./paginas/login.html" class="menu_link" id="login"><span>Login</span></a></li>
-            <li class="menu_item"><a href="" class="menu_link"  onclick="logOut()" id="logout"><span id="usuariolog"></span><span>Logout</span></a></li>
-            <div class="nav-social">
-              <a href="" class="nav-social__item"><i class="fab fa-facebook-f"></i></a>
-              <a href="" class="nav-social__item"><i class="fab fa-twitter"></i></a>
-              
-            </div>
+            <li class="menu_item"><a href="" class="menu_link"  onclick="logOut()" id="logout"><span id="usuariolog"></span><span>Logout</span></a></li>           
           </ul>
         </nav>
       </div>
@@ -60,8 +52,8 @@
     <div class="banner">
       <div class="banner__content">
         <div class="container">
-          <h2 class="banner__title">01</h2>
-          <p class="banner__txt">DESCUBRE TODO LO QUE UNA SENCILLA CIUDAD TE PUEDE ENSEÑAR.</p>
+          
+          <p class="banner__title">DESCUBRE TODO LO QUE UNA SENCILLA CIUDAD TE PUEDE ENSEÑAR.</p>
         </div>
       </div>
     </div>
@@ -89,13 +81,7 @@
           <h3 class="design__title">Cultura</h3>
           <img src="media/cathedral.jpg" alt="" class="design__img">
         </div>
-      </section>
-     <!-- <section class="container-testimonials">
-        <h3 class="section__title">WHAT PEOPLE ARE SAYING</h3>
-        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="testimonials__img">
-        <p class="testimonials__txt">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-        <p class="testimonials__name">Richard Doe</p>
-      </section>-->
+      </section>    
       <section class="container-tips">
         <div class="design__item">
           <h3 class="design__title">Consulta ofertas & novedades</h3>
@@ -106,21 +92,21 @@
             <div class="box__icon"><i class="fas fa-cog"></i></div>
             <div class="box__content">
               <h3 class="box__title">TEATROS</h3>
-              <p class="box__txt">Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</p>
+              <p class="box__txt">Compra entradas para las mejores obras de teatro en Málaga.</p>
             </div>
           </div>
           <div class="box">
             <div class="box__icon"><i class="fas fa-university"></i></div>
             <div class="box__content">
               <h3 class="box__title">MUSEOS</h3>
-              <p class="box__txt">Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</p>
+              <p class="box__txt">Guía de los 10 mejores</p>
             </div>
           </div>
           <div class="box">
             <div class="box__icon"><i class="fas fa-wrench"></i></div>
             <div class="box__content">
               <h3 class="box__title">PLAYAS</h3>
-              <p class="box__txt">Maecenas bibendum nisi purus, in ullamcorper nisl aliquam id.</p>
+              <p class="box__txt">Las mejores playas e ideales para pasar un día de relax y descubrir rincones de la costa del sol. ¡Entra y descúbrelas!.</p>
             </div>
           </div>
         </div>
@@ -136,8 +122,8 @@
     <footer class="main-footer">
       <div class="container">
         <div class="column column--50-25">
-          <h2 class="footer__title">Company</h2>
-          <p class="footer__txt">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of Latin at Hampden-Sydney College in Virginia from a Lorem Ipsum passage, undoubtable source</p>
+          <h2 class="footer__title">Nuestro Equipo</h2>
+          <p class="footer__txt">Para más información sobre lo que ofrecemos en nuestra web y/o cualquier problema en ofertas emitidas, o no poder acceder a diferentes enlaces , no dudes en contactar con nuestro equipo.</p>
           <cite class="footer__author">- Rita Mesa, MLG</cite>
         </div>
         <div class="column column--50-25">
@@ -150,7 +136,7 @@
           <p class="footer__date">About 15 minutes ago</p>
         </div>
         <div class="column column--50-25">
-          <h2 class="footer__title">Connect</h2>
+          <h2 class="footer__title">EN otras redes</h2>
           <div class="footer__socials">
             <div class="social-icon">
               <i class="fab fa-facebook-f"></i>
@@ -164,7 +150,7 @@
           </div>
         </div>
         <div class="column column--50-25">
-          <h2 class="footer__title">Contact</h2>
+          <h2 class="footer__title">Contacto</h2>
           <div class="contact-icon">
             <i class="fas fa-map-marker-alt"></i>
             <p class="contact__txt">Ocio by Rita</p>
@@ -179,5 +165,5 @@
           </div>
         </div>
       </div>
-        <p class="copy">© 2021 Lugares de Ocio en Malaga.| Rita Mª Mesa <span class="color-span">1DAM</span></p>
+        <p class="copy">© 2021 Lugares de Ocio en Malaga | Rita Mª Mesa <span class="color-span">1DAM</span></p>
     </footer>
