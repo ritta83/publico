@@ -323,6 +323,10 @@ p {
 .box__content{
   width: 70%;
 }
+
+#logout{
+  display: none;
+}
 .box__icon{
   width: 100px;
   height: 100px;
