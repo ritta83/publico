@@ -60,19 +60,19 @@ p {
   visibility: hidden;
   transition: all 0.5s;
 }
-.menu_item {
+.menu__item {
   padding: 20px;
   text-align: center;
   width: 150px;
   margin: auto;
 }
-.menu_link {
+.menu__link {
   color: white;
   text-decoration: none;
   position: relative;
   display: block;
 }
-.menu_link:before {
+.menu__link:before {
   content: "";
   position: absolute;
   width: 5px;
@@ -83,7 +83,7 @@ p {
   right: 0;
   opacity: 0;
 }
-.menu_link:after {
+.menu__link:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -94,7 +94,7 @@ p {
   bottom: 0;
   opacity: 0;
 }
-.menu_link span:before {
+.menu__link span:before {
   content: "";
   position: absolute;
   width: 5px;
@@ -105,7 +105,7 @@ p {
   left: 0;
   opacity: 0;
 }
-.menu_link span:after {
+.menu__link span:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -116,15 +116,15 @@ p {
   right: 0;
   opacity: 0;
 }
-.menu_link span{
+.menu__link span{
   padding: 10px;
   font-size: 1.1em;
   display: block;
 }
-.menu_link--select:before, .menu__link--select:after, .menu__link--select span:before, .menu__link--select span:after {
+.menu__link--select:before, .menu__link--select:after, .menu__link--select span:before, .menu__link--select span:after {
   opacity: 1;
 }
-.menu_item:hover .menu__link:before, .menu__item:hover .menu__link:after, .menu__item:hover .menu__link span:before, .menu__item:hover .menu__link span:after {
+.menu__item:hover .menu__link:before, .menu__item:hover .menu__link:after, .menu__item:hover .menu__link span:before, .menu__item:hover .menu__link span:after {
   opacity: 1;
 }
 /*Estilos del banner*/
@@ -372,12 +372,6 @@ p {
 }
 .social-icon .fa-twitter{
   background: #3bbef5;
-}
-.social-icon .fa-dribbble{
-  background: #f7659b;
-}
-.social-icon .fa-pinterest{
-  background: #e23139;
 }
 
 .social__link{
